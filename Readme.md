@@ -9,3 +9,6 @@ mcalc-osx CIM amps 30
 torque(N*m)	rpm	amps	output(W)	heat(W)	eff
 0.51		4196	30.00	225.32		134.68	62.59
 ```
+
+Build dependencies:
+Ubuntu 15.10: go-bindata, golang-go

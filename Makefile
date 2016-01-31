@@ -1,8 +1,9 @@
 build:
-	go-bindata -o motors.go motors.csv
+	go-bindata -o motors.go data
 	go build
+
 debug:
-	go-bindata -o motors.go --debug motors.csv
+	go-bindata -o motors.go --debug data
 
 release:
 	GOOS=darwin GOARCH=amd64 go build -o dist/mcalc-osx
@@ -12,6 +13,6 @@ release:
 	GOOS=windows GOARCH=amd64 go build -o dist/mcalc-64.exe
 	zip -r dist.zip dist
 
-
+.PHONY: clean
 clean:
-	rm dist/*
+	rm -f dist/*

@@ -41,6 +41,11 @@ func main() {
 		motors = append(motors, motor)
 	}
 
+	if len(os.Args)!=4 {
+		fmt.Println("usage: <MOTOR> <amps/torque> <value>");
+		os.Exit(1);
+	}
+
 	selectedMotorString := os.Args[1]
 	selectedMotor := new(Motor)
 	for _, m := range motors {
